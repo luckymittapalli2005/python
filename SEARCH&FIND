@@ -1,0 +1,12 @@
+    FIND():
+a="he is my friend"
+b=a.find("my")
+print(b)
+    COUNT():
+a="he is my friend raju,he is smart"
+b=a.count("friend")
+print(b)
+    REPLACE():
+a="he is my friend raju,he is smart"
+b=a.replace("my","your")
+print(b)
