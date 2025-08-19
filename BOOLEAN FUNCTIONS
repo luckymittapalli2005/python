@@ -1,0 +1,63 @@
+ ISALPHA():
+EX1:
+text = "Python"
+print(text.isalpha())
+EX2:
+text = "Python3"
+print(text.isalpha())  
+    ISDIGIT():
+EX1:
+num = "12345"
+print(num.isdigit()) 
+EX2
+num = "12.3"
+print(num.isdigit())  
+ISUPPER():
+EX1:
+word = "hello"
+print(word.islower())  
+EX2:
+word = "Hello"
+print(word.islower()) 
+    ISUPPER():
+EX1:
+word = "HELLO"
+print(word.isupper())  
+EX2:
+word = "Hello"
+print(word.isupper())
+    ISTITLE():
+EX1:
+title = "Machine Learning"
+print(title.istitle())
+EX2
+title = "machine Learning"
+print(title.istitle())  
+ISNUM():
+EX1:
+code = "A1B2C3"
+print(code.isalnum())
+EX2:
+code = "A1 B2"
+print(code.isalnum())
+     ISSPACE():
+EX1:
+space = "   "
+print(space.isspace()) 
+EX2:
+space="  a  "
+print(space.isspace())
+  ISDECIMAL():
+EX1:
+num = "456"
+print(num.isdecimal())  
+EX2:
+num = "Ⅻ"
+print(num.isdecimal()) 
+    ISNUMERIC():
+EX1:
+num = "Ⅻ"
+print(num.isnumeric())
+EX2:
+num = "12a"
+print(num.isnumeric())  
