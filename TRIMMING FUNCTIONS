@@ -1,0 +1,4 @@
+     STRIP():
+a="he is my friend raju,he is smart"
+b=a.strip()
+print(b)
