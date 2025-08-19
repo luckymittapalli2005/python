@@ -1,0 +1,8 @@
+    SPLIT():
+a=" he is my friend raju,he is smart"
+b=a.split()
+print(b)
+    JOIN():
+a=" he is my friend raju,he is smart"
+b=a.join("->")
+print(b)
