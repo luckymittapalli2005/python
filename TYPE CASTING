@@ -1,3 +1,7 @@
+EX1:
 a="123"
 b="456"
 print(int(a)+int(b))
+EX2:
+a="sachin"
+print(list(a))
