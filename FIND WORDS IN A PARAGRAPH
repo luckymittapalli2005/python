@@ -1,0 +1,4 @@
+paragraph="python is a powerful programming language.it is widely used in data science,wed development,and AI."
+words=paragraph.split()
+word_count=len(words)
+print("number of words:",word_count)
