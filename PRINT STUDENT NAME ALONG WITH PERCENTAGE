@@ -1,0 +1,8 @@
+student=['uma','rama','chintu','rani','raju']
+marks=[[20,30,40,50,90],[40,67,78,89,90],[67,89,67,78,90],[34,56,78,87,65],[98,90,89,99,97]]
+per=[]
+for i in marks:
+    d=sum(i)//3
+    per.append(d)
+for i in range(5):
+    print("{}.{} : {}%".format(i+1,student[i],per[i]))
