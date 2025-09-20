@@ -1,0 +1,13 @@
+class RECTANGLE:
+    def set_dim(self,length,breadth):
+        self.length=length
+        self.breadth=breadth
+    def ar(self):
+        print("the area is:",self.length*self.breadth)
+    def peri(self):
+        print("the perimeter is:",2*self.length+self.breadth)
+        
+a1=RECTANGLE()
+a1.set_dim(10,20)
+a1.ar()
+a1.peri()
