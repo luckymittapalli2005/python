@@ -1,0 +1,34 @@
+class Cog:
+    cmp_name = "cognizent"
+    Ann_amount = 50000000
+    tax = 10
+    def __init__(self, a, b, c):
+        self.name = a
+        self.salary = b
+        self.share_per = c
+        self.tax_pay = 0
+        self.share_amo = 0
+    def cal_tax(self):
+        self.tax_pay = (self.salary * self.tax) / 100
+
+    def cal_share(self):
+        self.share_amo = (self.Ann_amount * self.share_per) /100
+    def display(self):
+        print("NAME:", self.name)
+        print("SALARY:", self.salary)
+        print("SHARE_PERCENTAGE:", self.share_per)
+        self.cal_tax()
+        self.cal_share()
+        print("TAX_PAYABLE:", self.tax_pay)
+        print("SHARE AMOUNT:", self.share_amo)
+n = int(input("Enter no.of employee: "))
+emp = []
+for i in range(n):
+    a = input("ENTER NAME: ")
+    b = int(input("ENTER SALARY: "))
+    c = int(input("ENTER SHARE PERCENTAGE: "))
+    r = Cog(a,b,c)
+    emp.append(r)
+for i in emp:
+    i.display()
+    print("---------------------------------------------------")
