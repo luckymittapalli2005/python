@@ -1,0 +1,76 @@
+def deposit(accounts, acc_no, amount):
+    accounts[acc_no] += amount
+    print(f"{amount} deposited to Account {acc_no}. Current Balance: {accounts[acc_no]}")
+
+def withdraw(accounts, acc_no, amount):
+    if amount > accounts[acc_no]:
+        print("Insufficient balance!")
+    else:
+        accounts[acc_no] -= amount
+        print(f"{amount} withdrawn from Account {acc_no}. Current Balance: {accounts[acc_no]}")
+
+def transfer(accounts, from_acc, to_acc, amount):
+    if to_acc not in accounts:
+        print("Recipient account not found!")
+    elif amount > accounts[from_acc]:
+        print("Insufficient balance for transfer!")
+    else:
+        accounts[from_acc] -= amount
+        accounts[to_acc] += amount
+        print(f"{amount} transferred from Account {from_acc} to Account {to_acc}.")
+        print(f"Sender Balance: {accounts[from_acc]}, Receiver Balance: {accounts[to_acc]}")
+
+accounts = {}
+
+n = int(input("Enter number of accounts: "))
+for i in range(n):
+    acc_no = input(f"Enter account number for account {i+1}: ")
+    balance = float(input(f"Enter initial balance for account {acc_no}: "))
+    accounts[acc_no] = balance
+
+while True:
+    print("\n--- Banking Menu ---")
+    print("1. Deposit")
+    print("2. Withdraw")
+    print("3. Transfer")
+    print("4. Show All Accounts")
+    print("5. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        acc_no = input("Enter account number: ")
+        if acc_no in accounts:
+            amount = float(input("Enter amount to deposit: "))
+            deposit(accounts, acc_no, amount)
+        else:
+            print("Account not found!")
+
+    elif choice == "2":
+        acc_no = input("Enter account number: ")
+        if acc_no in accounts:
+            amount = float(input("Enter amount to withdraw: "))
+            withdraw(accounts, acc_no, amount)
+        else:
+            print("Account not found!")
+
+    elif choice == "3":
+        from_acc = input("Enter sender account number: ")
+        to_acc = input("Enter recipient account number: ")
+        if from_acc in accounts:
+            amount = float(input("Enter amount to transfer: "))
+            transfer(accounts, from_acc, to_acc, amount)
+        else:
+            print("Sender account not found!")
+
+    elif choice == "4":
+        print("\n--- Account Balances ---")
+        for acc, bal in accounts.items():
+            print(f"Account {acc}: {bal}")
+
+    elif choice == "5":
+        print("Exiting program. Thank you!")
+        break
+
+    else:
+        print("Invalid choice. Please try again.")
