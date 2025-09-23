@@ -1,0 +1,9 @@
+import qrcode
+upi_id="uma.friday@okaxis"
+name="learn with uma"
+amount="100"
+note="payment for course"
+upi_link=f"upi://pay?pa={upi_id}&pn={name}&tn={note}&am={amount}&cu=INR"
+qr=qrcode.make(upi_link)
+qr.save("uma.png")
+print("qr code generated and saved as'upi_payment_qr.png'")
