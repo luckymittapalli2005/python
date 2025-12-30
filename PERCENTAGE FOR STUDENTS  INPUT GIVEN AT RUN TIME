@@ -25,3 +25,28 @@ for i in students:
     print("NAME:",i.name)
     print("PERCENTAGE:",i.cal_per())
     index=index+1
+
+
+
+
+
+
+
+
+ANOTHER METHOD TO THIS:
+class Student:
+    def __init__(self):
+        self.s1=int(input("enter marks1:"))
+        self.s2=int(input("enter marks2:"))
+        self.s3=int(input("enter marks3:"))
+
+    def display(self):
+        print((self.s1+self.s2+self.s3)//3)
+l=[]
+n=int(input("enter no.of students:"))
+for i in range(n):
+    x=Student()
+    l.append(x)
+
+for i in range(n):
+    l[i].display()
